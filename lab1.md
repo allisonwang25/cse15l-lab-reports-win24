@@ -46,7 +46,7 @@
 
      ![Image](/cat/noArgument.png)
      * The working directory when the command was run was `/home`, as shown in the screenshot.
-     * When this command is run with no argument, nothing is initially printed out. However, if you type anything into the command line after the command is run, your input will be printed out. (In the screenshot, I typed in the first "hello". The second "hello" is generated.) This is true until the command is terminated with ctrl-D.
+     * When this command is run with no argument, nothing is initially printed out. However, if you type anything into the command line after the command is run, your input will be printed out. By default, the cat command reads from the terminal and prints what it reads. (In the screenshot, I typed in the first "hello". The second "hello" is generated.) This is true until the command is terminated with ctrl-D.
      * No error occurs
    * Path to _Directory_ as Argument
 
