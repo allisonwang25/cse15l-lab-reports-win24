@@ -17,7 +17,8 @@
 
      ![Image](/cd/pathToFile.png)
      * The working directory when the command was run was `/home/lecture1`, as shown in the screenshot.
-     * An error occurs when this command is run because `cd` is a command that only takes in arguments that are directory paths. Giving it a path to a file results in an error message that states that the file isn't a directory. 
+     * An error occurs when this command is run because `cd` is a command that only takes in arguments that are directory paths. Giving it a path to a file results in an error message that states that the file isn't a directory.
+
   ---
 
 ### Behavior of the `ls` Command
@@ -38,7 +39,8 @@
      ![Image](/ls/pathToFile.png)
      * The working directory when the command was run was `/home/lecture1`, as shown in the screenshot.
      * When this command is run with an argument that is a path to a file, the name of that file is printed out. In this case, the path for `Hello.java` is passed as an argument, and "Hello.java" is printed out.
-     * No error occurs. 
+     * No error occurs.
+
 ---
 
 ### Behavior of the `cat` Command
