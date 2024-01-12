@@ -6,13 +6,13 @@
      ![Image](/cd/noArgument.png)
      * The working directory when the command was run was `/home/lecture1/messages`, as shown in the screenshot
      * By entering the command `cd` with no argument, it runs `cd`'s default action. The user is returned to the root directory, `/home`. 
-     * The output is not an error.  
+     * No error occurs.  
    * Path to _Directory_ as Argument
 
      ![Image](/cd/pathToDirectory.png)
      * The working directory when the command was run was `/home`, as shown in the screenshot
      * By entering the command `cd` followed by the path to a directory, the user is taken to the directory given in the argument, as long as that directory is within the working directory. In this case, since `lecture1` is within the `/home` directory, the user is taken into the `/home/lecture1` directory.
-     * The output is not an error.
+     * No error occurs.
    * Path to _File_ as Argument
 
      ![Image](/cd/pathToFile.png)
@@ -21,8 +21,22 @@
 ---
 ### Behavior of the `ls` Command
    * _No_ Arguments
+
+     ![Image](/ls/noArgument.png)
+     * The working directory when the command was run was `/home`, as shown in the screenshot.
+     * When this command is run without any arguments, the contents of the current working directory are listed. In this case, the only thing within the current working directory, `/home`, is the directory `lecture1`, which is exactly what is printed out.
+     * No error occurs.  
    * Path to _Directory_ as Argument
+
+     ![Image](/ls/pathToDirectory.png)
+     * The working directory when the command was run was `/home`, as shown in the screenshot.
+     * When this command is run with an argument that is a path to a directory, the contents of that directory are listed. In this case, the path to the directory `/home/lecture1` is given as an argument and, therefore, the contents of `/home/lecture1` are listed.
+     * No error occurs. 
    * Path to _File_ as Argument
+
+     ![Image](/ls/pathToFile.png)
+     * The working directory when the command was run was `/home/lecture1`, as shown in the screenshot.
+     * When this command is run with an argument that is a path to a file, the name of that file is printed out. In this case, the path for `Hello.java` is passed as an argument and "Hello.java" is printed out. 
 ---
 ### Behavior of the `cat` Command
    * _No_ Arguments
