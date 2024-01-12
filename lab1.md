@@ -37,10 +37,24 @@
 
      ![Image](/ls/pathToFile.png)
      * The working directory when the command was run was `/home/lecture1`, as shown in the screenshot.
-     * When this command is run with an argument that is a path to a file, the name of that file is printed out. In this case, the path for `Hello.java` is passed as an argument and "Hello.java" is printed out. 
+     * When this command is run with an argument that is a path to a file, the name of that file is printed out. In this case, the path for `Hello.java` is passed as an argument, and "Hello.java" is printed out.
+     * No error occurs. 
 ---
 
 ### Behavior of the `cat` Command
    * _No_ Arguments
+
+     ![Image](/cat/noArgument.png)
+     * The working directory when the command was run was `/home`, as shown in the screenshot.
+     * When this command is run with no argument, nothing is initially printed out. However, if you type anything into the command line after the command is run, your input will be printed out. (In the screenshot, I typed in the first "hello". The second "hello" is generated.) This is true until the command is terminated with ctrl-D.
+     * No error occurs
    * Path to _Directory_ as Argument
+
+     ![Image](/cat/pathToDirectory.png)
+     * The working directory when the command was run was `/home` as shown in the screenshot.
+     * When this command is run with a path to a directory as the argument, an error occurs, and the terminal outputs an error message, saying that the argument is a directory. 
    * Path to _File_ as Argument
+
+     ![Image](/cat/pathToFile.png)
+     * The working directory when the command was run was `/home/lecture1` as shown in the screenshot.
+     * When this command is run with a path to a directory as the argument, each line of the file is printed out. In this case, we use cat on `Hello.java` and, as a result, all the lines of code within `Hello.java` are printed out. 
