@@ -54,7 +54,7 @@
 
      ![Screenshot](/cat/pathToDirectory.png)
      * The working directory when the command was run was `/home` as shown in the screenshot.
-     * When this command is run with a path to a directory as the argument, an error occurs, and the terminal outputs an error message, saying that the argument is a directory. 
+     * When this command is run with a path to a directory as the argument, an error occurs, and the terminal outputs an error message, saying that the argument is a directory. This error occurs because this command can only handle paths to files and cannot handle the path to a directory. 
    * Path to _File_ as Argument
 
      ![Screenshot](/cat/pathToFile.png)
