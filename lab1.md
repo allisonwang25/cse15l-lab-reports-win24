@@ -59,4 +59,5 @@
 
      ![Screenshot](/cat/pathToFile.png)
      * The working directory when the command was run was `/home/lecture1` as shown in the screenshot.
-     * When this command is run with a path to a directory as the argument, each line of the file is printed out. In this case, we use cat on `Hello.java` and, as a result, all the lines of code within `Hello.java` are printed out. 
+     * When this command is run with a path to a directory as the argument, each line of the file is printed out. In this case, we use cat on `Hello.java` and, as a result, all the lines of code within `Hello.java` are printed out.
+     * No error occurs
