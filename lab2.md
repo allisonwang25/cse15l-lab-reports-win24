@@ -56,13 +56,13 @@ class ChatServer {
 }
 ```
 ![Screenshot of Adding First Message](/addMessage/addMessage1.png)
-* The handleRequest method in class Handler is called.
+* The handleRequest method in class Handler is called. Inside of the handleRequest method, the getPath method and contains method are used to see if the path has `/add-message` or is just the empty/default path `/`. The getQuery method then parses the part of the url after the `?` if the path has `/add-message`. The split method is then used to split the query into the user and message and each resulting component into the label and the value if the labels are correct. In this case, the path contains `/add-message` and the labels are correct so all of these methods are called. The arraylist's add method is also called, as the new message is added to the data structure. 
 * The argument taken into this method is the url `http://localhost:4000/add-message?s=YAY&user=yao`. The value of `ArrayList<String> allMessages` is null at the method is called.
-* This request changes the value of `ArrayList<String> allMessages` from null to `["yao: YAY"]` (one value is added to the array list). 
+* This request changes the value of `ArrayList<String> allMessages` from null to `["yao: YAY"]` (one value is added to the array list). Also, all of the local variables are updated according to the url given. Most importantly, username is updated to String `"yao"`, message is updated to String `"YAY"`, and result is updated to `"yao: YAY"`
 ![Screenshot of Adding Second Message](/addMessage/addMessage2.png)
-* The same method, handleRequest method in class Handler, is called.
+* The same method, handleRequest in class Handler, is called. Inside of the handleRequest method, the getPath method and contains method are used to see if the path has `/add-message` or is just the empty/default path `/`. The getQuery method then parses the part of the url after the `?` if the path has `/add-message`. The split method is then used to split the query into the user and message and each resulting component into the label and the value if the labels are correct. In this case, the path contains `/add-message` and the labels are correct so all of these methods are called. The arraylist's add method is also called, as the new message is added to the data structure.  
 * The argument taken into this method is the url `http://localhost:4000/add-message?s=WE DID IT&user=allison`. The value of `ArrayList<String> allMessages` has value `["yao: YAY"]`  at the method is called.
-* This request changes the value of `ArrayList<String> allMessages` from `["yao: YAY"]` to `["yao: YAY", "allison: WE DID IT]` (one value is added to the array list).
+* This request changes the value of `ArrayList<String> allMessages` from `["yao: YAY"]` to `["yao: YAY", "allison: WE DID IT]` (one value is added to the array list). Also, all of the local variables are updated according to the url given. Most importantly, username is updated to String `"allison"`, message is updated to String `"WE DID IT"`, and result is updated to `"allison: WE DID IT"`
 
 ## Part 2: SSH
 * ![Absolute Path of Private Key Screenshot](/absolutePath/privateKey.png)
