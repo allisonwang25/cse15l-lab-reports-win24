@@ -1,5 +1,5 @@
 # Lab Report 2: Servers and SSH Keys
-## Part1: Chat Server
+## Part 1: Chat Server
 Code for Chat Server:
 ```java
 import java.util.ArrayList;
