@@ -69,7 +69,7 @@ class ChatServer {
   * The absolute path is `/Users/allisonwang/.ssh/id_rsa`
 * ![Absolute Path of Public Key Screenshot](/absolutePath/publicKey.png)
   * The absolute path is `/home/linux/ieng6/oce/9f/alw036/.ssh/authorized_keys`
-* ![No Password Login Attempt Screenshot](/noPasswordLogin.png)
+* ![No Password Login Attempt Screenshot](/absolutePath/noPasswordLogin.png)
 
 ## Part 3: What Have I Learned
 In week 2 lab, I learned about how URLs are handled in the backend and that once a server is open, it can be opened from another computer as long as the link (with information about the port it's opened on and such) is given. 
