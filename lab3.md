@@ -1028,14 +1028,56 @@
         ./chapter-11.txt
         ```
     * The -L command does the opposite of the -l command and prints out the names of all the files that don't contain the key phrase rather than printing out every single time the phrase comes up in any of the files. This is useful because it gives the information about which of the files don't contain the key phrase, which could later be useful as a count of how many files don't have the key phrase among other things. 
-  *  
-    
-
-
-
-
-
-        
-    
-
-  
+  * -n
+    * example 1: 
+      * ```
+        allisonwang@Allisons-MacBook-Pro 911report % find . -name "*.txt" > all-txt-files-911.txt
+        allisonwang@Allisons-MacBook-Pro 911report % grep -r -n ".txt" all-txt-files-911.txt
+        ```
+      * ```
+        all-txt-files-911.txt:1:./chapter-13.4.txt
+        all-txt-files-911.txt:2:./chapter-13.5.txt
+        all-txt-files-911.txt:3:./chapter-13.1.txt
+        all-txt-files-911.txt:4:./chapter-13.2.txt
+        all-txt-files-911.txt:5:./chapter-13.3.txt
+        all-txt-files-911.txt:6:./chapter-3.txt
+        all-txt-files-911.txt:7:./chapter-2.txt
+        all-txt-files-911.txt:8:./chapter-1.txt
+        all-txt-files-911.txt:9:./chapter-5.txt
+        all-txt-files-911.txt:10:./chapter-6.txt
+        all-txt-files-911.txt:11:./chapter-7.txt
+        all-txt-files-911.txt:12:./chapter-9.txt
+        all-txt-files-911.txt:13:./chapter-8.txt
+        all-txt-files-911.txt:14:./preface.txt
+        all-txt-files-911.txt:15:./chapter-12.txt
+        all-txt-files-911.txt:16:./chapter-10.txt
+        all-txt-files-911.txt:17:./chapter-11.txt
+        all-txt-files-911.txt:18:./all-txt-files-911.txt
+        ```
+    * example 2:
+      * ```
+        allisonwang@Allisons-MacBook-Pro biomed % grep -r -n ".txt" gb-2001-2-9-research0037.txt
+        ```
+      * ``` 
+        gb-2001-2-9-research0037.txt:762:          hyb2dis.txt in additional data files). More importantly,
+        gb-2001-2-9-research0037.txt:814:        hyb2dis.txt: patch file that converts White's hybridize
+        gb-2001-2-9-research0037.txt:816:        Training sets(GlycineMedicago.txt,Rhizobia.txt,
+        gb-2001-2-9-research0037.txt:817:        Stramenopiles.txt, ZygoChytrid.txt): FASTA-formatted text
+        gb-2001-2-9-research0037.txt:820:        Test sets(PsojaeHA.txt, PsojaeMY.txt, PsojaeZO.txt,
+        gb-2001-2-9-research0037.txt:821:        MtRHE.txt, DSIR.txt, MHAM.txt, KV0.txt, KV2.txt, KV3.txt):
+        gb-2001-2-9-research0037.txt:834:        hyb2dis.txt
+        gb-2001-2-9-research0037.txt:838:        hyb2dis.txt
+        gb-2001-2-9-research0037.txt:843:        GlycineMedicago.txt
+        gb-2001-2-9-research0037.txt:844:        Rhizobia.txt
+        gb-2001-2-9-research0037.txt:845:        Stramenopiles.txt
+        gb-2001-2-9-research0037.txt:846:        ZygoChytrid.txt
+        gb-2001-2-9-research0037.txt:851:        PsojaeHA.txt
+        gb-2001-2-9-research0037.txt:852:        PsojaeMY.txt
+        gb-2001-2-9-research0037.txt:853:        PsojaeZO.txt
+        gb-2001-2-9-research0037.txt:854:        MtRHE.txt
+        gb-2001-2-9-research0037.txt:855:        DSIR.txt
+        gb-2001-2-9-research0037.txt:856:        KV0.txt
+        gb-2001-2-9-research0037.txt:857:        KV2.txt
+        gb-2001-2-9-research0037.txt:858:        KV3.txt
+        ```
+    * The -n command places the line number next to each of the lines that have the the key phrase in them. This is useful if you want to know the line number of the occurences of the key phrase as well as improving readability if you use it on a file that contains all files within certain keyword in their name like what I did in the first example.      
