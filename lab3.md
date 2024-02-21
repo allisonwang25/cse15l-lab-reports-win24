@@ -40,11 +40,9 @@
       }
       ```
 ## Part 2: Researching Commands - GREP
-  * -r
+  * `-r`
     * example 1:
-      * ```
-        allisonwang@Allisons-MacBook-Pro technical % grep -r ".txt"
-        ```
+      * `allisonwang@Allisons-MacBook-Pro technical % grep -r ".txt"`
       * ```
         ./biomed/gb-2003-4-5-r34.txt:            20,000), and repeat the process. The Readme.txt file
         ./biomed/gb-2001-2-7-research0025.txt:        Pfam_Annotation.txt
@@ -88,9 +86,7 @@
         ./biomed/1471-2105-3-4.txt:          conversions of .chp (.txt) for each individual profile
         ```
     * example 2:
-      * ```
-        allisonwang@Allisons-MacBook-Pro biomed % grep -r ".txt"
-        ```
+      * `allisonwang@Allisons-MacBook-Pro biomed % grep -r ".txt"`
       * ```
         ./gb-2003-4-5-r34.txt:            20,000), and repeat the process. The Readme.txt file
         ./gb-2001-2-7-research0025.txt:        Pfam_Annotation.txt
@@ -133,13 +129,12 @@
         ./1471-2105-3-6.txt:          readme.txt documentation file are also included.
         ./1471-2105-3-4.txt:          conversions of .chp (.txt) for each individual profile
         ```
-    * The -r command recursively searches for the given "phrase" through the contents of all of the files in the current directory as well as in any files within subdirectories that could have the specified phrase. This is useful because you can look through the entire directory without having to specify how deep in subdirectories you want to look. 
+    * The `-r` command recursively searches for the given "phrase" through the contents of all of the files in the current directory as well as in any files within subdirectories that could have the specified phrase. This is useful because you can look through the entire directory without having to specify how deep in subdirectories you want to look. 
+    * used the `man grep` command to find the command line argument `-r` and what it does
 
-  * -l
+  * `-l`
     * example 1:
-      * ```
-        allisonwang@Allisons-MacBook-Pro biomed % grep -r -l ".txt"
-        ```
+      * `allisonwang@Allisons-MacBook-Pro biomed % grep -r -l ".txt"`
       * ```
         ./gb-2003-4-5-r34.txt
         ./gb-2001-2-7-research0025.txt
@@ -154,9 +149,7 @@
         ./1471-2105-3-4.txt
         ```
     * example 2:
-      * ```
-        allisonwang@Allisons-MacBook-Pro technical % grep -r -l ".txt"
-        ```
+      * `allisonwang@Allisons-MacBook-Pro technical % grep -r -l ".txt"`
       * ```
         ./biomed/gb-2003-4-5-r34.txt
         ./biomed/gb-2001-2-7-research0025.txt
@@ -170,12 +163,28 @@
         ./biomed/1471-2105-3-6.txt
         ./biomed/1471-2105-3-4.txt
         ```
-    * The -l command prints out the names of all the files that contain the key phrase rather than printing out every single time the phrase comes up in any of the files. This is useful because it gives the information about when the key phrase pops up but is potentially less expensive since it stops searching through the file once it finds first instance of the key phrase
-  * -L
-    * example 1: 
-      * ```
-        allisonwang@Allisons-MacBook-Pro biomed % grep -r -L ".txt"
+    * The `-l` command prints out the names of all the files that contain the key phrase rather than printing out every single time the phrase comes up in any of the files. This is useful because it gives the information about when the key phrase pops up but is potentially less expensive since it stops searching through the file once it finds first instance of the key phrase
+    * used ChatGPT to see how to use `-l`
+      * ChatGPT Prompt: 
+        `how to use -l with grep`
+      * ChatGPT Response: 
         ```
+        The -l option in grep is used to print only the names of files with matching lines, rather than printing the actual matching lines themselves. This is useful when you're only interested in knowing which files contain the pattern you're searching for. Here's how you can use -l with grep:
+
+        bash
+        Copy code
+        grep -l "pattern" file1.txt file2.txt
+        In this command:
+
+        grep is the command itself.
+        -l is the option indicating that you want to print the names of files with matching lines.
+        "pattern" is the text pattern you're searching for.
+        file1.txt and file2.txt are the files in which you want to search for the pattern.
+        This command will output the names of files (file1.txt and file2.txt) that contain at least one occurrence of the specified pattern. If multiple files are searched and all of them contain the pattern, grep will list all of them.
+        ```
+  * `-L`
+    * example 1: 
+      * `allisonwang@Allisons-MacBook-Pro biomed % grep -r -L ".txt"`
       * ```
         ./1472-6807-2-2.txt
         ./1471-2350-4-3.txt
@@ -1006,9 +1015,7 @@
         ./1476-4598-1-6.txt
         ```
     * example 2: 
-      * ```
-        allisonwang@Allisons-MacBook-Pro 911report % grep -r -L ".txt"
-        ```
+      * `allisonwang@Allisons-MacBook-Pro 911report % grep -r -L ".txt"`
       * ```
         ./chapter-13.4.txt
         ./chapter-13.5.txt
@@ -1028,8 +1035,8 @@
         ./chapter-10.txt
         ./chapter-11.txt
         ```
-    * The -L command does the opposite of the -l command and prints out the names of all the files that don't contain the key phrase rather than printing out every single time the phrase comes up in any of the files. This is useful because it gives the information about which of the files don't contain the key phrase, which could later be useful as a count of how many files don't have the key phrase among other things. 
-  * -n
+    * used `man grep` command to see what the `-L` command line argument does
+  * `-n`
     * example 1: 
       * ```
         allisonwang@Allisons-MacBook-Pro 911report % find . -name "*.txt" > all-txt-files-911.txt
@@ -1056,9 +1063,7 @@
         all-txt-files-911.txt:18:./all-txt-files-911.txt
         ```
     * example 2:
-      * ```
-        allisonwang@Allisons-MacBook-Pro biomed % grep -r -n ".txt" gb-2001-2-9-research0037.txt
-        ```
+      * `allisonwang@Allisons-MacBook-Pro biomed % grep -r -n ".txt" gb-2001-2-9-research0037.txt`
       * ``` 
         gb-2001-2-9-research0037.txt:762:          hyb2dis.txt in additional data files). More importantly,
         gb-2001-2-9-research0037.txt:814:        hyb2dis.txt: patch file that converts White's hybridize
@@ -1081,4 +1086,73 @@
         gb-2001-2-9-research0037.txt:857:        KV2.txt
         gb-2001-2-9-research0037.txt:858:        KV3.txt
         ```
-    * The -n command places the line number next to each of the lines that have the the key phrase in them. This is useful if you want to know the line number of the occurences of the key phrase as well as improving readability if you use it on a file that contains all files within certain keyword in their name like what I did in the first example.      
+    * The `-n` command places the line number next to each of the lines that have the the key phrase in them. This is useful if you want to know the line number of the occurences of the key phrase as well as improving readability if you use it on a file that contains all files within certain keyword in their name like what I did in the first example.
+    * used ChatGPT to see how to use `-n`
+      * ChatGPT Prompt: 
+        `how to use -n`
+      * ChatGPT Response: 
+        ```
+        The -n option in grep is used to precede each matching line with its relative line number. This is helpful when you want to know the line number of the matched pattern within the file. Here's how you can use -n with grep:
+
+        bash
+        Copy code
+        grep -n "pattern" file.txt
+        In this command:
+
+        grep is the command itself.
+        -n is the option indicating that you want to display line numbers.
+        "pattern" is the text pattern you're searching for.
+        file.txt is the file in which you want to search for the pattern.
+        When you run this command, grep will output each line from file.txt that contains the specified pattern, preceded by its line number. For example:
+
+        arduino
+        Copy code
+        1:This is the first line containing the pattern.
+        3:Here is another line with the pattern.
+        5:Yet another line, also containing the pattern.
+        This output indicates that the pattern occurs on lines 1, 3, and 5 of the file file.txt.
+        ```
+  * utilized ChatGPT and and the man command to find the list of all the options for command line arguments
+    * ChatGPT prompt:
+      ```
+      grep command line arguments
+      ```
+    * ChatGPT response:
+      ``` 
+      The grep command is a powerful tool used in Unix-like operating systems for searching text patterns in files. It stands for "global regular expression print." Here are some common command-line arguments used with grep:
+      Pattern Matching Options:
+
+      -e pattern : Specifies the pattern to be matched.
+      -E : Enables extended regular expressions (allows more complex patterns).
+      -F : Interprets the pattern as a fixed string (disables regular expressions).
+      -i : Ignores case distinctions in both the pattern and input files.
+      File Selection Options:
+
+      filename : The name of the file(s) to be searched.
+      -r, -R : Recursively search subdirectories.
+      -l : Prints only the names of files with matching lines.
+      -L : Prints only the names of files without matching lines.
+      -c : Prints only a count of matching lines per file.
+      Output Control Options:
+
+      -n : Precedes each matching line with its relative line number.
+      -v : Prints all lines that do not match the pattern.
+      --color : Highlights the matched pattern in color.
+      Other Options:
+
+      -A NUM : Prints NUM lines of trailing context after a match.
+      -B NUM : Prints NUM lines of leading context before a match.
+      -C NUM : Prints NUM lines of leading and trailing context.
+      Miscellaneous Options:
+
+      -h : Suppresses the prefixing of filenames on output when multiple files are searched.
+      -q : Suppresses all normal output. grep will only return an exit status.
+      --help : Displays a help message and exits.
+      --version : Prints version information and exits.
+      Example usage:
+
+      bash
+      Copy code
+      grep -rn "pattern" /path/to/directory
+      This command recursively searches for "pattern" in all files under /path/to/directory, displaying the line number and file name for each match. 
+      ```   
