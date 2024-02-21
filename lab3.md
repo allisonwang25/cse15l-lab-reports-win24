@@ -130,7 +130,7 @@
         ./1471-2105-3-4.txt:          conversions of .chp (.txt) for each individual profile
         ```
     * The `-r` command recursively searches for the given "phrase" through the contents of all of the files in the current directory as well as in any files within subdirectories that could have the specified phrase. This is useful because you can look through the entire directory without having to specify how deep in subdirectories you want to look. 
-    * used the `man grep` command to find the command line argument `-r` and what it does
+    * used the `man grep` command to find the command line argument `-r` and see what it does and how to use it
 
   * `-l`
     * example 1:
@@ -1035,7 +1035,7 @@
         ./chapter-10.txt
         ./chapter-11.txt
         ```
-    * used `man grep` command to see what the `-L` command line argument does
+    * used the `man grep` command to find the command line argument `-L` and see what it does and how to use it
   * `-n`
     * example 1: 
       * ```
