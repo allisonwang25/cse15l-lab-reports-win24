@@ -26,4 +26,3 @@
 * **s** : delete and replace character cursor is on
 * **\<escape\>** : exits from editing mode of vim
 * **:wq:** : save and quit vim editor
-  
