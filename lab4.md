@@ -17,7 +17,7 @@
 * **cd**: changes current directory to lab7, the directory with all the files
 * **\<Ctrl-r\>**: access bash history and search the characters given after
 * **vim**: open vim editor for the command-line argument afterwords
-* **43j**: move cursor down 43 times
+* **43j**: execute j command which moves cursor down 43 times
 * **e**: move to end of next word
 * **s**: delete and replace character cursor is on
 * **\<escape\>**: exits from editing mode of vim
