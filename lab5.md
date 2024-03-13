@@ -214,7 +214,7 @@
         }
 
        ```
-     - command lines I ran
+     - command lines I ran\
        `allisonwang@Allisons-MacBook-Pro buggy % bash test.sh`
      - How to fix the bug
        - By moving the creation of the list into the filter method, removing the static label, and removing the line
