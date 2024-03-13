@@ -212,7 +212,13 @@
     
            ```
      - command lines I ran\
-       `allisonwang@Allisons-MacBook-Pro buggy % bash test.sh`
+       - ```
+         allisonwang@Allisons-MacBook-Pro buggy % javac ListExamples.java
+         allisonwang@Allisons-MacBook-Pro buggy % java ListExamples.java
+         allisonwang@Allisons-MacBook-Pro buggy % bash test.sh
+         ```
+       - first two lines to run the main method of ListExamples in order to print out the lists that resulted from filter.
+       - third line runs shell script to run tester on ListExamples
      - How to fix the bug
        - By moving the creation of the list into the filter method, removing the static label, and removing the line
          `results.clear()`, we have now corrected the bug.
