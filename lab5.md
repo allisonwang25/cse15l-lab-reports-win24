@@ -20,10 +20,7 @@
   out the element of the list each time you run the filter method.  Let me know if this helps.
 3. **Trying the command, Terminal Output:**\
    ![Trying printing out each list after I run the filter method twice](testByPrinting.png)
-     - This shows that both list variables hold the same values, indicating that it points to the same memory space due to the
-       static nature of the List in the ListExamples Class, making the static nature of the list the bug in question. Since they
-       point to the same memory space, when the filter method is run a second time, the data is cleared and overwritten for both
-       variables now holding the static result List
+     - This shows that both list variables hold the same values, indicating that it points to the same memory space due to the static nature of the List in the ListExamples Class, making the static nature of the list the bug in question. Since they point to the same memory space, when the filter method is run a second time, the data is cleared and overwritten for both variables now holding the static List<String> result
 4. Setup:
      - File/Directory Structure
        ```
@@ -35,14 +32,14 @@
         └── TestListExamples.java
        ```
      - Contents before fixing the bug
-       - test.sh
+       - test.sh\
        ```
        CPATH=".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar"
 
        javac -cp $CPATH *.java
        java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
        ``` 
-       - ListExamples.java
+       - ListExamples.java\
        ```
         import java.util.ArrayList;
         import java.util.List;
@@ -101,7 +98,7 @@
         }
 
        ```
-       - TestListExamples.java
+       - TestListExamples.java\
        ```
         import static org.junit.Assert.*;
         import org.junit.*;
