@@ -18,11 +18,12 @@
   memory space across different calls to the filter method. Remember again that when initializing variables to equal an object,
   it just instantializes the variable as a pointer to that object. What do these facts mean in conjunction? It may help to print
   out the element of the list each time you run the filter method.  Let me know if this helps.
-3. **Fixed Bug Terminal Output:**
+3. **Trying the command, Terminal Output:**\
    ![Trying printing out each list after I run the filter method twice](testByPrinting.png)
-     - This shows that both list variables point to the same memory space due to the static nature of the List in the ListExamples
-       Class, making the static nature of the list the bug in question. Since they point to the same memory space, when the filter
-       method is run a second time, the data is cleared and overwritten for both variables now holding the static result List
+     - This shows that both list variables hold the same values, indicating that it points to the same memory space due to the
+       static nature of the List in the ListExamples Class, making the static nature of the list the bug in question. Since they
+       point to the same memory space, when the filter method is run a second time, the data is cleared and overwritten for both
+       variables now holding the static result List
 4. Setup:
      - File/Directory Structure
        ```
